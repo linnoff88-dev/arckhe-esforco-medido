@@ -1,6 +1,6 @@
 # effort measured
 
-[![effort measured](guia/assets/banner-en.jpg)](https://inematds.github.io/esforco-medido/guia/en/)
+[![effort measured](guia/assets/banner-en.jpg)](https://linnoff88-dev.github.io/
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
@@ -14,7 +14,7 @@ model never sees. It also includes 14 effort tips, each with a source. Requires 
 
 ## 📖 User guide
 
-Full guide (landing page + step-by-step instructions): **https://inematds.github.io/esforco-medido/guia/en/**
+Full guide (landing page + step-by-step instructions): **https://linnoff88-dev.github.io/
 
 ## Why
 
@@ -49,7 +49,7 @@ Repetition (noise): Fable 5.2 on the `carrinho` (shopping cart) task, `low` and 
 ## Quick start
 
 ```bash
-git clone https://github.com/inematds/esforco-medido.git
+git clone https://github.com/linnoff88-dev/esforco-medido.git
 cd esforco-medido
 ./medir.sh carrinho -m opus -e low,medium        # 2 quick runs to see it working
 ./medir.sh calendario                            # fable and opus, low → max (10 runs; max takes a while)
@@ -78,7 +78,7 @@ would type it), and `oculto/checar.py <folder>` that prints `NOTA n/total`. Run 
 
 | # | Step | Command | Who |
 |---|---|---|---|
-| 1 | Download the kit | `git clone https://github.com/inematds/esforco-medido.git` | 🧠 you |
+| 1 | Download the kit | `git clone https://github.com/linnoff88-dev/esforco-medido.git` | 🧠 you |
 | 2 | Choose or create a task | `ls tarefas/` or `tarefas/<name>/` | 🧠 you |
 | 3 | Measure the levels | `./medir.sh <task> [-m …] [-e …] [-r 3]` | ⚙️ script + 🤖 `claude -p` |
 | 4 | Read the results | `resultados/<task>-<date>/RESULTADO.md` | 🧠 you |
@@ -94,7 +94,7 @@ would type it), and `oculto/checar.py <folder>` that prints `NOTA n/total`. Run 
 
 ## Related kit
 
-[effort right](https://github.com/inematds/esforco-certo): audits which model and effort level each part of your project
+[effort right](https://github.com/linnoff88-dev/esforco-certo): audits which model and effort level each part of your project
 runs on, and compares two levels on your own work (`ab.sh`).
 
 ## License

@@ -49,4 +49,4 @@ mediu (ver `exemplos/`). Lido em 12/11/2026.
     No Claude Code, o `/effort` no meio da sessão vale a partir da próxima mensagem. [guia] [Claude Code]
 14. **Meça na sua tarefa, não na de outra pessoa.** Rode `./medir.sh <tarefa>` (cópia limpa, checador oculto, 5 níveis) e
     escolha o nível mais baixo que acerta. Para comparar só dois níveis num projeto seu, use o `ab.sh` do kit irmão
-    [esforço certo](https://inematds.github.io/esforco-certo/guia/). [medido]
+    [esforço certo](https://linnoff88-dev.github.io/ [medido]

@@ -1,4 +1,4 @@
-﻿# esforÃ§o medido
+# esforÃ§o medido
 
 <div align="center">
   <img src="capa/logo.svg" alt="Arckhé AI" height="48" />
@@ -6,7 +6,7 @@
 </div>
 
 
-[![esforÃ§o medido](guia/assets/banner.jpg)](https://inematds.github.io/esforco-medido/guia/)
+[![esforÃ§o medido](guia/assets/banner.jpg)](https://linnoff88-dev.github.io/
 
 **ðŸ‡§ðŸ‡· [PortuguÃªs](README.md) Â· ðŸ‡ºðŸ‡¸ [English](README.en.md) Â· ðŸ‡ªðŸ‡¸ [EspaÃ±ol](README.es.md)**
 
@@ -20,7 +20,7 @@ dicas de esforÃ§o, cada uma com a fonte. Precisa de Python 3 e do Claude Code;
 
 ## ðŸ“– Guia de uso
 
-Guia completo (landing + passo a passo): **https://inematds.github.io/esforco-medido/guia/**
+Guia completo (landing + passo a passo): **https://linnoff88-dev.github.io/
 
 ## Por quÃª
 
@@ -56,7 +56,7 @@ nÃ£o uma contagem solta de ferramentas (`exemplos/carrinho-repeticao/`).
 ## ComeÃ§o rÃ¡pido
 
 ```bash
-git clone https://github.com/inematds/esforco-medido.git
+git clone https://github.com/linnoff88-dev/esforco-medido.git
 cd esforco-medido
 ./medir.sh carrinho -m opus -e low,medium        # 2 rodadas rÃ¡pidas para ver funcionando
 ./medir.sh calendario                            # fable e opus, low â†’ max (10 rodadas; o max demora)
@@ -85,7 +85,7 @@ digitaria) e `oculto/checar.py <pasta>` imprimindo `NOTA n/total`. Rode `./medir
 
 | # | Passo | Comando | Quem |
 |---|---|---|---|
-| 1 | Baixar o kit | `git clone https://github.com/inematds/esforco-medido.git` | ðŸ§  vocÃª |
+| 1 | Baixar o kit | `git clone https://github.com/linnoff88-dev/esforco-medido.git` | ðŸ§  vocÃª |
 | 2 | Escolher ou criar a tarefa | `ls tarefas/` ou `tarefas/<nome>/` | ðŸ§  vocÃª |
 | 3 | Medir os nÃ­veis | `./medir.sh <tarefa> [-m â€¦] [-e â€¦] [-r 3]` | âš™ï¸ script + ðŸ¤– `claude -p` |
 | 4 | Ler o quadro | `resultados/<tarefa>-<data>/RESULTADO.md` | ðŸ§  vocÃª |
@@ -101,7 +101,7 @@ digitaria) e `oculto/checar.py <pasta>` imprimindo `NOTA n/total`. Rode `./medir
 
 ## Kit irmÃ£o
 
-[esforÃ§o certo](https://github.com/inematds/esforco-certo): audita em que modelo e esforÃ§o cada parte do seu projeto
+[esforÃ§o certo](https://github.com/linnoff88-dev/esforco-certo): audita em que modelo e esforÃ§o cada parte do seu projeto
 roda e compara dois nÃ­veis num trabalho seu (`ab.sh`).
 
 ## LicenÃ§a

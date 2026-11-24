@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>esforço medido — o que o esforço muda de verdade no Claude</title>
 <meta name="description" content="Kit grátis: mede o que o nível de esforço muda no Claude Fable 5.2 e no Opus 5.5 (ferramentas, conferências, tempo, acerto) e traz 14 dicas com fonte.">
-<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/esforco-medido/guia/">
-<link rel="alternate" hreflang="en" href="https://inematds.github.io/esforco-medido/guia/en/">
-<link rel="alternate" hreflang="es" href="https://inematds.github.io/esforco-medido/guia/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://linnoff88-dev.github.io/
+<link rel="alternate" hreflang="en" href="https://linnoff88-dev.github.io/
+<link rel="alternate" hreflang="es" href="https://linnoff88-dev.github.io/
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -39,8 +39,8 @@
   nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora,sans-serif;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
   nav .brand .emoji{font-size:1.25rem}
   nav .sep{color:var(--mut);opacity:.45}
-  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora,sans-serif}
-  nav .inema:hover{filter:brightness(1.15)}
+  nav .ARCKHÉ{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora,sans-serif}
+  nav .ARCKHÉ:hover{filter:brightness(1.15)}
   nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora,sans-serif}
   nav .pro:hover{filter:brightness(1.15)}
   nav .clubpro{display:inline-flex;align-items:center;gap:6px}
@@ -123,9 +123,9 @@
   <a class="brand" href="#top"><span class="emoji">🎚️</span> esforço medido</a>
   <span class="sep">|</span>
   <span class="clubpro">
-    <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+    <a class="ARCKHÉ" href="https://ARCKHÉ AI" target="_blank" rel="noopener">ARCKHÉ AI</a>
     <span class="sep">-</span>
-    <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
+    <a class="pro" href="https://ARCKHÉ.pro" target="_blank" rel="noopener">PRO</a>
   </span>
   <div class="links">
     <a class="sec" href="#mito">Esforço ≠ tempo</a>
@@ -136,7 +136,7 @@
     <a class="sec" href="#tecnico">Kit (técnico)</a>
     <span class="lang"><a class="on" href="./">PT</a><a href="en/">EN</a><a href="es/">ES</a></span>
     <button class="tgl" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">🌙</button>
-    <a class="btn" href="https://github.com/inematds/esforco-medido" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://github.com/linnoff88-dev/esforco-medido" target="_blank" rel="noopener">GitHub</a>
   </div>
 </div></nav>
 
@@ -149,7 +149,7 @@
       <p class="lead">Medi 30 vezes: nas 3 tarefas, o esforço mínimo acertou tudo, igual ao máximo, que no Fable custou cerca de 14× mais. O esforço muda quanto a IA pensa e confere, e o “alto” de um modelo não é o do outro.</p>
       <div class="cta">
         <a class="btn" href="#mito">Entender em 5 minutos</a>
-        <a class="btn ghost" href="https://github.com/inematds/esforco-medido" target="_blank" rel="noopener">Ver no GitHub</a>
+        <a class="btn ghost" href="https://github.com/linnoff88-dev/esforco-medido" target="_blank" rel="noopener">Ver no GitHub</a>
       </div>
     </div>
     <figure><img src="assets/banner.jpg" alt="Banner do esforço medido: botão de esforço e painel de medição"></figure>
@@ -224,7 +224,7 @@
     <div class="card"><h3>O que subiu com o esforço</h3><p>O pensamento subiu em todo degrau, nos dois modelos. As conferências (rodar o código para checar) cresceram pouco do <em>low</em> ao <em>high</em> (Fable 3 → 7; no Opus quase não mudaram, 5 → 4) e saltaram no <em>xhigh</em> e no <em>max</em> (Fable 25, Opus 16): lá o modelo escreve scripts de teste, procura casos de borda e confere de novo.</p></div>
     <div class="card"><h3>O que não mudou</h3><p>A nota. Nestas tarefas curtas e bem descritas, o nível mais baixo já resolveu. O Opus 5.5 no <em>low</em> acertou tudo pelo menor custo (US$ 0,30), cerca de 32× menos que o Fable 5.2 no <em>max</em>.</p></div>
   </div>
-  <p class="note">* Custo que o Claude Code calcula pela tabela da API (somado antes de arredondar); na assinatura você paga em limite, então ~14× e ~32× são razões de custo equivalente, não do seu limite. Pensamento = tokens de raciocínio contados no registro de cada rodada (no RESULTADO.md, o número entre parênteses). <strong>Leia com cuidado:</strong> são tarefas curtas, uma rodada cada. Elas não mostram onde o esforço alto ajuda: segundo a Anthropic, em trabalho longo o esforço baixo tende a parar antes de terminar, e problemas abertos e difíceis ganham com mais esforço. Nestas rodadas nenhum modelo parou antes nem chamou subagente. Quadros completos: <a href="https://github.com/inematds/esforco-medido/tree/main/exemplos" target="_blank" rel="noopener">exemplos/</a>.</p>
+  <p class="note">* Custo que o Claude Code calcula pela tabela da API (somado antes de arredondar); na assinatura você paga em limite, então ~14× e ~32× são razões de custo equivalente, não do seu limite. Pensamento = tokens de raciocínio contados no registro de cada rodada (no RESULTADO.md, o número entre parênteses). <strong>Leia com cuidado:</strong> são tarefas curtas, uma rodada cada. Elas não mostram onde o esforço alto ajuda: segundo a Anthropic, em trabalho longo o esforço baixo tende a parar antes de terminar, e problemas abertos e difíceis ganham com mais esforço. Nestas rodadas nenhum modelo parou antes nem chamou subagente. Quadros completos: <a href="https://github.com/linnoff88-dev/esforco-medido/tree/main/exemplos" target="_blank" rel="noopener">exemplos/</a>.</p>
   <p class="note"><strong>Repetição (ruído):</strong> Fable 5.2 no carrinho, <em>low</em> e <em>high</em> 3 vezes cada: todas 12/12; <em>low</em> 26–33 s, <em>high</em> 39–49 s, e o <em>high</em> sempre pensou mais. O número de ferramentas variou de 3 a 12 entre rodadas iguais: compare pensamento e tempo, não uma contagem solta de ferramentas.</p>
 </div></section>
 
@@ -247,13 +247,13 @@
     <tr><td>Fable 5.2</td><td>US$ 0,24</td><td>US$ 0,27</td><td>US$ 0,35</td><td>US$ 0,74</td><td>US$ 3,26</td></tr>
     <tr><td>Opus 5.5</td><td>US$ 0,10</td><td>US$ 0,13</td><td>US$ 0,16</td><td>US$ 0,26</td><td>US$ 1,26</td></tr>
   </table></div>
-  <p class="note">* Média das 3 tarefas (calendário, carrinho, intervalos), uma rodada por combinação, 12/11/2026. Na assinatura você paga em limite, não em dólar. A maior distância entre <em>max</em> e <em>low</em> foi no calendário: o Opus custou 18× mais no <em>max</em> (US$ 1,58 contra US$ 0,09; a razão usa os valores antes de arredondar). Tarefa longa ou aberta pode pedir mais esforço: meça na sua com o <code>./medir.sh</code>. Página completa: <a href="https://github.com/inematds/esforco-medido/blob/main/dicas/QUAL-USAR.md" target="_blank" rel="noopener">dicas/QUAL-USAR.md</a>.</p>
+  <p class="note">* Média das 3 tarefas (calendário, carrinho, intervalos), uma rodada por combinação, 12/11/2026. Na assinatura você paga em limite, não em dólar. A maior distância entre <em>max</em> e <em>low</em> foi no calendário: o Opus custou 18× mais no <em>max</em> (US$ 1,58 contra US$ 0,09; a razão usa os valores antes de arredondar). Tarefa longa ou aberta pode pedir mais esforço: meça na sua com o <code>./medir.sh</code>. Página completa: <a href="https://github.com/linnoff88-dev/esforco-medido/blob/main/dicas/QUAL-USAR.md" target="_blank" rel="noopener">dicas/QUAL-USAR.md</a>.</p>
 </div></section>
 
 <section id="dicas"><div class="wrap">
   <span class="chip">14 dicas</span>
   <h2>Como escolher o esforço <span class="amb">sem pagar à toa</span></h2>
-  <p class="sub">Cada dica tem a fonte. A lista completa, com os detalhes, está em <a href="https://github.com/inematds/esforco-medido/blob/main/dicas/DICAS.md" target="_blank" rel="noopener">dicas/DICAS.md</a>.</p>
+  <p class="sub">Cada dica tem a fonte. A lista completa, com os detalhes, está em <a href="https://github.com/linnoff88-dev/esforco-medido/blob/main/dicas/DICAS.md" target="_blank" rel="noopener">dicas/DICAS.md</a>.</p>
   <div class="grid g2">
     <div>
       <div class="dica"><b>1. Esforço não é cronômetro.</b><span>Muda quanto pensa e age; o tempo é consequência.</span></div>
@@ -327,7 +327,7 @@
   <div class="step"><div class="b">1</div><div>
     <h3>Baixe o kit</h3>
     <p>Clone e rode os testes (sem rede).</p>
-<pre><span class="k">git clone</span> <span class="s">https://github.com/inematds/esforco-medido.git</span>
+<pre><span class="k">git clone</span> <span class="s">https://github.com/linnoff88-dev/esforco-medido.git</span>
 <span class="k">cd</span> esforco-medido
 <span class="k">python3</span> -m unittest discover tests   <span class="c"># 18 testes OK</span></pre>
   </div></div>
@@ -376,7 +376,7 @@
     <div class="card"><h3>Isolado de propósito</h3><p>Sem o HOME temporário, o seu CLAUDE.md e os seus hooks entram em todas as rodadas e mudam o comportamento. <code>--sem-isolar</code> mede o seu ambiente de verdade.</p></div>
     <div class="card"><h3>macOS</h3><p>Lá o login fica no Keychain: se o isolamento não achar a credencial, o script avisa e roda sem isolar.</p></div>
   </div>
-  <p class="note">Kit irmão: <a href="https://inematds.github.io/esforco-certo/guia/" target="_blank" rel="noopener">esforço certo</a> audita em que modelo e esforço cada parte do seu projeto roda e compara dois níveis num trabalho seu.</p>
+  <p class="note">Kit irmão: <a href="https://linnoff88-dev.github.io/ target="_blank" rel="noopener">esforço certo</a> audita em que modelo e esforço cada parte do seu projeto roda e compara dois níveis num trabalho seu.</p>
 </div></section>
 </div>
 
@@ -384,8 +384,8 @@
   <div class="wrap">
     <div class="pill">Bash</div><div class="pill">Python 3</div><div class="pill">Claude Code</div>
     <p style="margin-top:18px">esforço medido · kit grátis, MIT ·
-      <a href="https://github.com/inematds/esforco-medido">inematds/esforco-medido</a> ·
-      <a href="https://inema.club">INEMA.CLUB</a></p>
+      <a href="https://github.com/linnoff88-dev/esforco-medido">linnoff88-dev/esforco-medido</a> ·
+      <a href="https://ARCKHÉ AI">ARCKHÉ AI</a></p>
   </div>
 </footer>
 

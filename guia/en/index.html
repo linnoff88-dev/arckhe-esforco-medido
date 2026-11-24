@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>effort measured — what effort really changes in Claude</title>
 <meta name="description" content="Free kit: measures what effort levels change in Claude Fable 5.2 and Opus 5.5 (tools, checks, time, accuracy) and includes 14 tips with sources.">
-<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/esforco-medido/guia/">
-<link rel="alternate" hreflang="en" href="https://inematds.github.io/esforco-medido/guia/en/">
-<link rel="alternate" hreflang="es" href="https://inematds.github.io/esforco-medido/guia/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://linnoff88-dev.github.io/
+<link rel="alternate" hreflang="en" href="https://linnoff88-dev.github.io/
+<link rel="alternate" hreflang="es" href="https://linnoff88-dev.github.io/
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -39,8 +39,8 @@
   nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora,sans-serif;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
   nav .brand .emoji{font-size:1.25rem}
   nav .sep{color:var(--mut);opacity:.45}
-  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora,sans-serif}
-  nav .inema:hover{filter:brightness(1.15)}
+  nav .ARCKHÉ{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora,sans-serif}
+  nav .ARCKHÉ:hover{filter:brightness(1.15)}
   nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora,sans-serif}
   nav .pro:hover{filter:brightness(1.15)}
   nav .clubpro{display:inline-flex;align-items:center;gap:6px}
@@ -123,9 +123,9 @@
   <a class="brand" href="#top"><span class="emoji">🎚️</span> effort measured</a>
   <span class="sep">|</span>
   <span class="clubpro">
-    <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+    <a class="ARCKHÉ" href="https://ARCKHÉ AI" target="_blank" rel="noopener">ARCKHÉ AI</a>
     <span class="sep">-</span>
-    <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
+    <a class="pro" href="https://ARCKHÉ.pro" target="_blank" rel="noopener">PRO</a>
   </span>
   <div class="links">
     <a class="sec" href="#mito">Effort ≠ time</a>
@@ -136,7 +136,7 @@
     <a class="sec" href="#tecnico">Kit (technical)</a>
     <span class="lang"><a href="../">PT</a><a class="on" href="./">EN</a><a href="../es/">ES</a></span>
     <button class="tgl" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
-    <a class="btn" href="https://github.com/inematds/esforco-medido" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://github.com/linnoff88-dev/esforco-medido" target="_blank" rel="noopener">GitHub</a>
   </div>
 </div></nav>
 
@@ -149,7 +149,7 @@
       <p class="lead">I measured 30 runs: across all 3 tasks, minimum effort got everything right, just like maximum effort, which on Fable cost about 14× more. Effort changes how much the AI thinks and checks, and one model’s “high” isn’t the same as another’s.</p>
       <div class="cta">
         <a class="btn" href="#mito">Understand it in 5 minutes</a>
-        <a class="btn ghost" href="https://github.com/inematds/esforco-medido" target="_blank" rel="noopener">View on GitHub</a>
+        <a class="btn ghost" href="https://github.com/linnoff88-dev/esforco-medido" target="_blank" rel="noopener">View on GitHub</a>
       </div>
     </div>
     <figure><img src="../assets/banner-en.jpg" alt="Effort measured banner: effort button and measurement dashboard"></figure>
@@ -224,7 +224,7 @@
     <div class="card"><h3>What increased with effort</h3><p>Thinking increased at every step in both models. Checks (running code to verify) grew a little from <em>low</em> to <em>high</em> (Fable 3 → 7, Opus barely changed, 5 → 4) and jumped at <em>xhigh</em> and <em>max</em> (Fable 25, Opus 16): at those levels, the model writes test scripts, looks for edge cases, and checks again.</p></div>
     <div class="card"><h3>What didn’t change</h3><p>The score. These short, clearly described tasks were already solved at the lowest level. Opus 5.5 at <em>low</em> got everything right at the lowest cost (US$ 0.30), about 32× less than Fable 5.2 at <em>max</em>.</p></div>
   </div>
-  <p class="note">* Cost calculated by Claude Code from the API price table (summed before rounding); with a subscription, you pay from your usage limit, so ~14× and ~32× are equivalent cost ratios, not changes to your limit. Thinking = reasoning tokens counted in each run’s log (the number in parentheses in RESULTADO.md). <strong>Read carefully:</strong> these are short tasks, one run each. They don’t show where high effort helps: according to Anthropic, at low effort, long tasks tend to stop before they’re finished, and open-ended, difficult problems benefit from more effort. None of these runs stopped early or called a subagent. Full records: <a href="https://github.com/inematds/esforco-medido/tree/main/exemplos" target="_blank" rel="noopener">exemplos/</a>.</p>
+  <p class="note">* Cost calculated by Claude Code from the API price table (summed before rounding); with a subscription, you pay from your usage limit, so ~14× and ~32× are equivalent cost ratios, not changes to your limit. Thinking = reasoning tokens counted in each run’s log (the number in parentheses in RESULTADO.md). <strong>Read carefully:</strong> these are short tasks, one run each. They don’t show where high effort helps: according to Anthropic, at low effort, long tasks tend to stop before they’re finished, and open-ended, difficult problems benefit from more effort. None of these runs stopped early or called a subagent. Full records: <a href="https://github.com/linnoff88-dev/esforco-medido/tree/main/exemplos" target="_blank" rel="noopener">exemplos/</a>.</p>
   <p class="note"><strong>Repetition (noise):</strong> Fable 5.2 on the <em>carrinho</em> (shopping cart) task, <em>low</em> and <em>high</em> three times each → all 12/12; <em>low</em> 26–33 s, <em>high</em> 39–49 s, and <em>high</em> always thought more (more reasoning tokens). The number of tools varied from 3 to 12 across identical runs: compare reasoning and time, not an isolated tool count.</p>
 </div></section>
 
@@ -247,13 +247,13 @@
     <tr><td>Fable 5.2</td><td>US$0.24</td><td>US$0.27</td><td>US$0.35</td><td>US$0.74</td><td>US$3.26</td></tr>
     <tr><td>Opus 5.5</td><td>US$0.10</td><td>US$0.13</td><td>US$0.16</td><td>US$0.26</td><td>US$1.26</td></tr>
   </table></div>
-  <p class="note">* Average across the 3 tasks (calendar, cart, intervals), one run per combination, 11/12/2026. With a subscription, you pay against a usage limit, not in dollars. The biggest gap between <em>max</em> and <em>low</em> was on the calendar task: Opus cost 18× more at <em>max</em> (US$1.58 vs. US$0.09; the ratio uses unrounded values). Long or open-ended tasks may need more effort: measure yours with <code>./medir.sh</code>. Full page: <a href="https://github.com/inematds/esforco-medido/blob/main/dicas/QUAL-USAR.md" target="_blank" rel="noopener">dicas/QUAL-USAR.md (in Portuguese)</a>.</p>
+  <p class="note">* Average across the 3 tasks (calendar, cart, intervals), one run per combination, 11/12/2026. With a subscription, you pay against a usage limit, not in dollars. The biggest gap between <em>max</em> and <em>low</em> was on the calendar task: Opus cost 18× more at <em>max</em> (US$1.58 vs. US$0.09; the ratio uses unrounded values). Long or open-ended tasks may need more effort: measure yours with <code>./medir.sh</code>. Full page: <a href="https://github.com/linnoff88-dev/esforco-medido/blob/main/dicas/QUAL-USAR.md" target="_blank" rel="noopener">dicas/QUAL-USAR.md (in Portuguese)</a>.</p>
 </div></section>
 
 <section id="dicas"><div class="wrap">
   <span class="chip">14 tips</span>
   <h2>How to choose an effort level <span class="amb">without wasting money</span></h2>
-  <p class="sub">Every tip includes its source. The full list, with details, is in <a href="https://github.com/inematds/esforco-medido/blob/main/dicas/DICAS.md" target="_blank" rel="noopener">dicas/DICAS.md</a> (in Portuguese).</p>
+  <p class="sub">Every tip includes its source. The full list, with details, is in <a href="https://github.com/linnoff88-dev/esforco-medido/blob/main/dicas/DICAS.md" target="_blank" rel="noopener">dicas/DICAS.md</a> (in Portuguese).</p>
   <div class="grid g2">
     <div>
       <div class="dica"><b>1. Effort isn’t a timer.</b><span>It changes how much the model thinks and acts; time is a consequence.</span></div>
@@ -327,7 +327,7 @@
   <div class="step"><div class="b">1</div><div>
     <h3>Download the kit</h3>
     <p>Clone it and run the tests (no network required).</p>
-<pre><span class="k">git clone</span> <span class="s">https://github.com/inematds/esforco-medido.git</span>
+<pre><span class="k">git clone</span> <span class="s">https://github.com/linnoff88-dev/esforco-medido.git</span>
 <span class="k">cd</span> esforco-medido
 <span class="k">python3</span> -m unittest discover tests   <span class="c"># 18 tests OK</span></pre>
   </div></div>
@@ -376,7 +376,7 @@
     <div class="card"><h3>Isolated by design</h3><p>Without the temporary HOME, your CLAUDE.md and hooks are loaded in every run and change the behavior. <code>--sem-isolar</code> measures your actual environment.</p></div>
     <div class="card"><h3>macOS</h3><p>Login is stored in Keychain there: if the isolated run can’t find the credential, the script warns you and runs without isolation.</p></div>
   </div>
-  <p class="note">Related kit: <a href="https://inematds.github.io/esforco-certo/guia/" target="_blank" rel="noopener">effort right</a> audits which model and effort level each part of your project uses and compares two levels on one of your tasks.</p>
+  <p class="note">Related kit: <a href="https://linnoff88-dev.github.io/ target="_blank" rel="noopener">effort right</a> audits which model and effort level each part of your project uses and compares two levels on one of your tasks.</p>
 </div></section>
 </div>
 
@@ -384,8 +384,8 @@
   <div class="wrap">
     <div class="pill">Bash</div><div class="pill">Python 3</div><div class="pill">Claude Code</div>
     <p style="margin-top:18px">effort measured · free kit, MIT ·
-      <a href="https://github.com/inematds/esforco-medido">inematds/esforco-medido</a> ·
-      <a href="https://inema.club">INEMA.CLUB</a></p>
+      <a href="https://github.com/linnoff88-dev/esforco-medido">linnoff88-dev/esforco-medido</a> ·
+      <a href="https://ARCKHÉ AI">ARCKHÉ AI</a></p>
   </div>
 </footer>
 

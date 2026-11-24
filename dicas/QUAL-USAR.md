@@ -45,7 +45,7 @@ São medições pequenas. Elas não mostram qual modelo vence em trabalho longo 
 
 Você pode usar [medir.sh](../medir.sh) para comparar níveis com o mesmo pedido e conferir se o resultado atende ao que precisa.
 Repita a medição antes de escolher. Fique com o menor esforço que mantenha a qualidade.
-Para comparar níveis no seu projeto, use também o kit irmão [esforco-certo](https://inematds.github.io/esforco-certo/guia/).
+Para comparar níveis no seu projeto, use também o kit irmão [esforco-certo](https://linnoff88-dev.github.io/
 As orientações atribuídas à Anthropic acima vêm do guia conforme registrado em [dicas/DICAS.md](./DICAS.md).
 
 Medido em 12/11/2026, Claude Code 2.1.323

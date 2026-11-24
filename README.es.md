@@ -1,6 +1,6 @@
 # esfuerzo medido
 
-[![esfuerzo medido](guia/assets/banner-es.jpg)](https://inematds.github.io/esforco-medido/guia/es/)
+[![esfuerzo medido](guia/assets/banner-es.jpg)](https://linnoff88-dev.github.io/
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
@@ -10,7 +10,7 @@ Esfuerzo medido es un kit gratuito que muestra con números qué cambia realment
 
 ## 📖 Guía de uso
 
-Guía completa (página de presentación + paso a paso): **https://inematds.github.io/esforco-medido/guia/es/**
+Guía completa (página de presentación + paso a paso): **https://linnoff88-dev.github.io/
 
 ## Por qué
 
@@ -38,7 +38,7 @@ Repetición (ruido): Fable 5.2 en la tarea `carrinho` (carrito), `low` y `high` 
 ## Inicio rápido
 
 ```bash
-git clone https://github.com/inematds/esforco-medido.git
+git clone https://github.com/linnoff88-dev/esforco-medido.git
 cd esforco-medido
 ./medir.sh carrinho -m opus -e low,medium        # 2 rodadas rápidas para ver funcionando
 ./medir.sh calendario                            # fable y opus, low → max (10 rodadas; max demora)
@@ -66,7 +66,7 @@ Crea `tarefas/<nome>/` con `projeto/` (el código que recibe el modelo), `pedido
 
 | # | Paso | Comando | Quién |
 |---|---|---|---|
-| 1 | Descargar el kit | `git clone https://github.com/inematds/esforco-medido.git` | 🧠 tú |
+| 1 | Descargar el kit | `git clone https://github.com/linnoff88-dev/esforco-medido.git` | 🧠 tú |
 | 2 | Elegir o crear la tarea | `ls tarefas/` ou `tarefas/<nome>/` | 🧠 tú |
 | 3 | Medir los niveles | `./medir.sh <tarefa> [-m …] [-e …] [-r 3]` | ⚙️ script + 🤖 `claude -p` |
 | 4 | Leer el cuadro | `resultados/<tarefa>-<data>/RESULTADO.md` | 🧠 tú |
@@ -82,7 +82,7 @@ Crea `tarefas/<nome>/` con `projeto/` (el código que recibe el modelo), `pedido
 
 ## Kit hermano
 
-[esfuerzo certo](https://github.com/inematds/esforco-certo): audita con qué modelo y nivel de esfuerzo se ejecuta cada parte de tu proyecto y compara dos niveles en un trabajo tuyo (`ab.sh`).
+[esfuerzo certo](https://github.com/linnoff88-dev/esforco-certo): audita con qué modelo y nivel de esfuerzo se ejecuta cada parte de tu proyecto y compara dos niveles en un trabajo tuyo (`ab.sh`).
 
 ## Licencia
 

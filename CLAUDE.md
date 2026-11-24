@@ -1,9 +1,9 @@
 # CLAUDE.md — esforço medido
 
-Kit público (inematds/esforco-medido): mede o que o nível de esforço muda no Claude Fable 5.2 e no Claude Opus 5.5
+Kit público (linnoff88-dev/esforco-medido): mede o que o nível de esforço muda no Claude Fable 5.2 e no Claude Opus 5.5
 (medir.sh + relatorio.py + tarefas com checador oculto) e traz 14 dicas com fonte (dicas/DICAS.md).
 
-- Autor dos commits: `inematds <inematds@gmail.com>`. Publicar = push (guia no GitHub Pages, `guia/`).
+- Autor dos commits: `linnoff88-dev <linnoff88-dev@gmail.com>`. Publicar = push (guia no GitHub Pages, `guia/`).
 - Testes: `python3 -m unittest discover tests` (sem rede). Não editar `medir.sh` enquanto uma varredura roda (o bash lê o
   script aos poucos).
 - Números do README, do guia e do vídeo vêm só de `exemplos/` (rodadas reais). Separar sempre "a Anthropic diz" de "eu medi"
