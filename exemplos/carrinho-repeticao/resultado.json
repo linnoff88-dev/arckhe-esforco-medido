@@ -18,7 +18,7 @@
   "custo_equivalente_usd": 0.2743,
   "negacoes": 1,
   "ofereceu_continuar": false,
-  "fim": " que não garante meio centavo para cima. Agora a conta é feita em `Decimal` e arredondada só no fim.\n- **Cupom desconhecido** (regra 6): dava `KeyError`; agora é ignorado, em `cupons.py`.\n\nUm ponto que as regras não cobrem: carrinho vazio (ou só com itens de quantidade ≤ 0) devolve R$ 25,00, o frete fixo. Segui a regra ao pé da letra; se o esperado for R$ 0,00, é uma linha a mais em `carrinho.py`.",
+  "fim": " que nêo garante meio centavo para cima. Agora a conta é feita em `Decimal` e arredondada só no fim.\n- **Cupom desconhecido** (regra 6): dava `KeyError`; agora é ignorado, em `cupons.py`.\n\nUm ponto que as regras nêo cobrem: carrinho vazio (ou só com itens de quantidade ≤ 0) devolve R$ 25,00, o frete fixo. Segui a regra ao pé da letra; se o esperado for R$ 0,00, é uma linha a mais em `carrinho.py`.",
   "ferramentas": 12,
   "por_ferramenta": {
    "Bash": 2,
@@ -56,7 +56,7 @@
   "custo_equivalente_usd": 0.3025,
   "negacoes": 1,
   "ofereceu_continuar": false,
-  "fim": "eita em `Decimal` e arredondada uma única vez no fim (`carrinho.py`).\n- **Cupom desconhecido dava `KeyError`** (regra 6): agora é ignorado (`cupons.py`).\n\nUm ponto que as regras não cobrem: carrinho vazio (ou só com itens de quantidade ≤ 0) resulta em R$ 25,00, porque o frete fixo continua sendo cobrado. Segui a regra ao pé da letra; se o esperado for R$ 0,00, é uma mudança de uma linha — me diga.",
+  "fim": "eita em `Decimal` e arredondada uma única vez no fim (`carrinho.py`).\n- **Cupom desconhecido dava `KeyError`** (regra 6): agora é ignorado (`cupons.py`).\n\nUm ponto que as regras nêo cobrem: carrinho vazio (ou só com itens de quantidade ≤ 0) resulta em R$ 25,00, porque o frete fixo continua sendo cobrado. Segui a regra ao pé da letra; se o esperado for R$ 0,00, é uma mudança de uma linha — me diga.",
   "ferramentas": 12,
   "por_ferramenta": {
    "Bash": 2,
@@ -94,7 +94,7 @@
   "custo_equivalente_usd": 0.3014,
   "negacoes": 1,
   "ofereceu_continuar": false,
-  "fim": "rinho vazio:** o total sai R$ 25,00 (só o frete), também quando todos os itens têm quantidade ≤ 0. Se o esperado for R$ 0,00, é uma mudança de uma linha — me diga.\n- **Limite do frete grátis:** a comparação usa o subtotal com cupom sem arredondar, então R$ 199,999 ainda paga frete.\n\nAlém do pedido, o cupom agora ignora espaços em volta (`\" dez \"` funciona); maiúsculas e minúsculas já eram aceitas.",
+  "fim": "rinho vazio:** o total sai R$ 25,00 (só o frete), também quando todos os itens têm quantidade ≤ 0. Se o esperado for R$ 0,00, é uma mudança de uma linha — me diga.\n- **Limite do frete grátis:** a comparaçêo usa o subtotal com cupom sem arredondar, entêo R$ 199,999 ainda paga frete.\n\nAlém do pedido, o cupom agora ignora espaços em volta (`\" dez \"` funciona); maiúsculas e minúsculas já eram aceitas.",
   "ferramentas": 12,
   "por_ferramenta": {
    "Bash": 2,
@@ -132,7 +132,7 @@
   "custo_equivalente_usd": 0.3122,
   "negacoes": 0,
   "ofereceu_continuar": false,
-  "fim": " as regras não são explícitas e eu segui a leitura literal:\n\n- **Carrinho vazio:** o total sai R$ 25,00 (só o frete), também quando todos os itens têm quantidade ≤ 0. Se o esperado for R$ 0,00, é uma mudança de uma linha.\n- **Limite do frete grátis:** a comparação com R$ 200,00 usa o valor sem arredondar. Um subtotal com cupom de R$ 199,996 paga frete, embora apareça como R$ 200,00 para o cliente.",
+  "fim": " as regras nêo sêo explícitas e eu segui a leitura literal:\n\n- **Carrinho vazio:** o total sai R$ 25,00 (só o frete), também quando todos os itens têm quantidade ≤ 0. Se o esperado for R$ 0,00, é uma mudança de uma linha.\n- **Limite do frete grátis:** a comparaçêo com R$ 200,00 usa o valor sem arredondar. Um subtotal com cupom de R$ 199,996 paga frete, embora apareça como R$ 200,00 para o cliente.",
   "ferramentas": 3,
   "por_ferramenta": {
    "Bash": 3
@@ -166,7 +166,7 @@
   "custo_equivalente_usd": 0.4503,
   "negacoes": 1,
   "ofereceu_continuar": false,
-  "fim": "danças estão em `carrinho.py`, `frete.py` e `cupons.py`. `total()` continua devolvendo `float` com 2 casas, mas `frete()` agora devolve `Decimal`.\n\nUm ponto que as regras não cobrem: carrinho vazio (ou só com itens de quantidade ≤ 0) resulta em R$ 25,00, porque o frete fixo é cobrado mesmo sem produtos. Mantive assim por ser a leitura literal das regras; se o certo for R$ 0,00, é uma linha a mais.",
+  "fim": "danças estêo em `carrinho.py`, `frete.py` e `cupons.py`. `total()` continua devolvendo `float` com 2 casas, mas `frete()` agora devolve `Decimal`.\n\nUm ponto que as regras nêo cobrem: carrinho vazio (ou só com itens de quantidade ≤ 0) resulta em R$ 25,00, porque o frete fixo é cobrado mesmo sem produtos. Mantive assim por ser a leitura literal das regras; se o certo for R$ 0,00, é uma linha a mais.",
   "ferramentas": 8,
   "por_ferramenta": {
    "Bash": 4,
@@ -202,7 +202,7 @@
   "custo_equivalente_usd": 0.3803,
   "negacoes": 1,
   "ofereceu_continuar": false,
-  "fim": "a se outro código fora deste diretório a chamar.\n\nDois casos que as regras não cobrem e que deixei seguindo a leitura literal:\n\n- **Carrinho vazio:** o total sai R$ 25,00 (só o frete), como já era antes.\n- **Subtotal logo abaixo de 200:** o frete é decidido pelo valor sem arredondar, então R$ 199,996 paga frete e o total sai R$ 225,00.\n\nSe algum dos dois deveria ser diferente, a mudança é pequena.",
+  "fim": "a se outro código fora deste diretório a chamar.\n\nDois casos que as regras nêo cobrem e que deixei seguindo a leitura literal:\n\n- **Carrinho vazio:** o total sai R$ 25,00 (só o frete), como já era antes.\n- **Subtotal logo abaixo de 200:** o frete é decidido pelo valor sem arredondar, entêo R$ 199,996 paga frete e o total sai R$ 225,00.\n\nSe algum dos dois deveria ser diferente, a mudança é pequena.",
   "ferramentas": 11,
   "por_ferramenta": {
    "Bash": 3,

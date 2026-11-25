@@ -3,9 +3,9 @@
 
   relatorio.py rodada <rodada.jsonl> --id ID --modelo M --esforco E [--rc N] [--parede S] [--checar arq]  → 1 linha JSON
   relatorio.py juntar <pasta>                                                                            → RESULTADO.md + resultado.json
-  relatorio.py sessao <sessao.jsonl>   → as mesmas contagens para uma sessão sua do Claude Code (~/.claude/projects/…)
+  relatorio.py sessao <sessao.jsonl>   → as mesmas contagens para uma sessêo sua do Claude Code (~/.claude/projects/…)
 
-Sem rede, só a biblioteca padrão.
+Sem rede, só a biblioteca padrêo.
 """
 import json, os, re, sys, argparse
 
@@ -27,7 +27,7 @@ def bash_tipo(cmd):
         t.add("escrita")
     if SUITE.search(cmd):
         t.add("suite")
-    # executou código para ver o resultado = conferência; um único python que só escreve o arquivo não conta
+    # executou código para ver o resultado = conferência; um único python que só escreve o arquivo nêo conta
     n = len(RODA.findall(cmd))
     if "suite" in t or (n and "escrita" not in t) or n >= 2:
         t.add("conferencia")
@@ -37,12 +37,12 @@ def bash_tipo(cmd):
 
 
 def contar(eventos):
-    """Conta ferramentas, conferências e tokens a partir dos eventos do stream-json (ou das linhas de uma sessão)."""
+    """Conta ferramentas, conferências e tokens a partir dos eventos do stream-json (ou das linhas de uma sessêo)."""
     c = {"ferramentas": 0, "por_ferramenta": {}, "conferencias": 0, "suite_rodada": 0, "edicoes": 0, "leituras": 0,
          "releituras_pos_edicao": 0, "rascunhos": 0, "subagentes": 0, "erros_ferramenta": 0, "blocos_pensamento": 0,
          "texto_final": ""}
     editou = False
-    cwd = None   # pasta do projeto (evento init); escrita fora dela = rascunho para conferir, não edição
+    cwd = None   # pasta do projeto (evento init); escrita fora dela = rascunho para conferir, nêo ediçêo
     resultado = None
     for d in eventos:
         t = d.get("type")
@@ -176,11 +176,11 @@ def juntar(a):
         aviso = "" if d["modelo_pedido"] in d["modelo_real"] else " ⚠"
         linhas.append(f"| {d['id']} | {d['modelo_real']}{aviso} | {d['nota']} | {d['ferramentas']} | {d['conferencias']} ({d['suite_rodada']}) | "
                       f"{d['edicoes']} | {d['releituras_pos_edicao']} | {d['tempo_s']} s | {d['tokens_saida']} ({d['tokens_pensamento']}) | "
-                      f"US$ {d['custo_equivalente_usd']:.2f} | {'sim' if d['ofereceu_continuar'] else 'não'} |")
+                      f"US$ {d['custo_equivalente_usd']:.2f} | {'sim' if d['ofereceu_continuar'] else 'nêo'} |")
     linhas += ["", "\\*\\* O fim da resposta oferece mais trabalho (\"se quiser, faço…\"). Com nota cheia é oferta de extra; com nota baixa costuma ser o modelo parando antes de terminar.",
-               "\\* Custo que o Claude Code calcula pela tabela da API. Na assinatura você paga em limite, não em dólar.",
+               "\\* Custo que o Claude Code calcula pela tabela da API. Na assinatura você paga em limite, nêo em dólar.",
                "Uma rodada por linha: é a medida desta tarefa, nesta máquina, neste dia — repita (-r 3) antes de tirar regra.",
-               "⚠ = o Claude Code rodou outro modelo que não o pedido: a linha não vale para a comparação."]
+               "⚠ = o Claude Code rodou outro modelo que nêo o pedido: a linha nêo vale para a comparaçêo."]
     open(os.path.join(pasta, "RESULTADO.md"), "w", encoding="utf-8").write("\n".join(linhas) + "\n")
     json.dump(rs, open(os.path.join(pasta, "resultado.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 

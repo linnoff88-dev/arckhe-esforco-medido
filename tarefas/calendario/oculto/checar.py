@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Checador oculto do calendário: 20 casos, comparados com uma implementação de referência. Uso: checar.py <pasta>."""
+"""Checador oculto do calendário: 20 casos, comparados com uma implementaçêo de referência. Uso: checar.py <pasta>."""
 import datetime as dt, importlib, os, sys
 
 D = dt.date
@@ -53,7 +53,7 @@ pasta = os.path.abspath(sys.argv[1]); sys.path.insert(0, pasta)
 try:
     c = importlib.import_module("calendario")
 except Exception as e:
-    print(f"NOTA 0/20 (não importa: {e})"); sys.exit(1)
+    print(f"NOTA 0/20 (nêo importa: {e})"); sys.exit(1)
 
 CASOS = [
     ("pascoa_1900_2099", lambda: all(c.pascoa(a) == r_pascoa(a) for a in range(1900, 2100))),

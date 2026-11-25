@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # medir.sh — roda a MESMA tarefa em vários esforços (e modelos) pelo Claude Code da sua assinatura e mede o que o esforço
 # muda de verdade: chamadas de ferramenta, conferências (testes rodados), edições, raciocínio, tempo, tokens, se terminou e a
-# nota de um checador oculto que o modelo não vê.
+# nota de um checador oculto que o modelo nêo vê.
 #
 # Uso:
 #   ./medir.sh <tarefa> [-m modelos] [-e esforços] [-r repetições] [--sem-isolar] [--teto SEG]
@@ -9,10 +9,10 @@
 # Exemplos:
 #   ./medir.sh carrinho                              # fable e opus, low → max (10 rodadas)
 #   ./medir.sh carrinho -m fable -e low,high -r 3    # 6 rodadas
-# Padrão: -m fable,opus -e low,medium,high,xhigh,max -r 1 · teto de 30 min por rodada.
+# Padrêo: -m fable,opus -e low,medium,high,xhigh,max -r 1 · teto de 30 min por rodada.
 #
 # Como roda:
-#   - cada rodada ganha uma cópia limpa de projeto/ numa pasta temporária, com um HOME temporário: o modelo NÃO lê o seu
+#   - cada rodada ganha uma cópia limpa de projeto/ numa pasta temporária, com um HOME temporário: o modelo NêO lê o seu
 #     CLAUDE.md global, seus hooks, plugins, skills nem MCP (isso mudaria o comportamento que você quer medir). Só a credencial
 #     da assinatura é ligada (link). --sem-isolar roda com tudo seu (use no macOS se o login falhar: lá ele fica no Keychain).
 #   - ANTHROPIC_API_KEY sai do ambiente: mede na ASSINATURA. Para medir na API de propósito: MEDIR_USAR_API=1.
@@ -36,15 +36,15 @@ while [ $# -gt 0 ]; do
 done
 [ -n "$TAREFA" ] || { echo "uso: ./medir.sh <tarefa> (ver --help)" >&2; exit 2; }
 T=$TAREFA; [ -d "$T" ] || T="$AQUI/tarefas/$TAREFA"
-T=$(cd "$T" 2>/dev/null && pwd) || { echo "tarefa não encontrada: $TAREFA" >&2; exit 2; }
+T=$(cd "$T" 2>/dev/null && pwd) || { echo "tarefa nêo encontrada: $TAREFA" >&2; exit 2; }
 for f in projeto pedido.txt oculto/checar.py; do [ -e "$T/$f" ] || { echo "falta $T/$f" >&2; exit 2; }; done
 for e in ${ESFORCOS//,/ }; do case $e in low|medium|high|xhigh|max) ;; *) echo "esforço inválido: $e" >&2; exit 2 ;; esac; done
-command -v claude >/dev/null || { echo "claude (Claude Code) não está no PATH" >&2; exit 2; }
+command -v claude >/dev/null || { echo "claude (Claude Code) nêo está no PATH" >&2; exit 2; }
 TO=$(command -v timeout || command -v gtimeout || true)
 [ "${MEDIR_USAR_API:-0}" = 1 ] || unset ANTHROPIC_API_KEY
 CRED="$HOME/.claude/.credentials.json"
 if [ $ISOLAR = 1 ] && [ ! -f "$CRED" ]; then
-  echo "aviso: não achei $CRED (no macOS o login fica no Keychain) → rodando sem isolar" >&2; ISOLAR=0
+  echo "aviso: nêo achei $CRED (no macOS o login fica no Keychain) → rodando sem isolar" >&2; ISOLAR=0
 fi
 NOME=$(basename "$T"); SAI="$AQUI/resultados/$NOME-$(date +%Y%m%d-%H%M%S)"; mkdir -p "$SAI"
 PEDIDO=$(cat "$T/pedido.txt")
@@ -68,7 +68,7 @@ for e in ${ESFORCOS//,/ }; do
         --permission-mode acceptEdits --allowedTools "Read Edit Write Glob Grep Bash(python3:*)" \
         --max-turns 200 --output-format stream-json --verbose -- "$PEDIDO" ) > "$SAI/$id.jsonl" 2> "$SAI/$id.err"
     rc=$?; fim=$(date +%s)
-    # a credencial pode ser renovada durante a rodada: se o link virou arquivo, devolve a versão nova ao seu HOME
+    # a credencial pode ser renovada durante a rodada: se o link virou arquivo, devolve a versêo nova ao seu HOME
     if [ $ISOLAR = 1 ] && [ -f "$X/.claude/.credentials.json" ] && [ ! -L "$X/.claude/.credentials.json" ]; then
       cp -p "$X/.claude/.credentials.json" "$CRED" && echo "  (credencial renovada copiada de volta)"
     fi

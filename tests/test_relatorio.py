@@ -74,7 +74,7 @@ class Contar(unittest.TestCase):
 
     def test_linha_quebrada_ignorada(self):
         with tempfile.NamedTemporaryFile("w", suffix=".jsonl", delete=False) as f:
-            f.write('{"type":"x"}\nnão é json\n')
+            f.write('{"type":"x"}\nnêo é json\n')
         self.assertEqual(len(R.ler_jsonl(f.name)), 1)
 
 
@@ -117,7 +117,7 @@ class Rodada(unittest.TestCase):
 
 
 class Checadores(unittest.TestCase):
-    """Os checadores ocultos dão nota baixa para o código original (a tarefa não vem resolvida)."""
+    """Os checadores ocultos dêo nota baixa para o código original (a tarefa nêo vem resolvida)."""
     def _nota(self, tarefa):
         p = subprocess.run([sys.executable, os.path.join(RAIZ, "tarefas", tarefa, "oculto", "checar.py"),
                             os.path.join(RAIZ, "tarefas", tarefa, "projeto")], capture_output=True, text=True)

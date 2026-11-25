@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Checador oculto (o modelo não vê): 16 casos. Uso: checar.py <pasta-do-projeto>. Imprime 'NOTA n/16' e sai 0 se 16/16."""
+"""Checador oculto (o modelo nêo vê): 16 casos. Uso: checar.py <pasta-do-projeto>. Imprime 'NOTA n/16' e sai 0 se 16/16."""
 import importlib.util, sys, os
 
 pasta = sys.argv[1]
@@ -8,7 +8,7 @@ mod = importlib.util.module_from_spec(spec)
 try:
     spec.loader.exec_module(mod)
 except Exception as e:
-    print(f"NOTA 0/16 (não importa: {e})"); sys.exit(1)
+    print(f"NOTA 0/16 (nêo importa: {e})"); sys.exit(1)
 j = mod.juntar
 
 CASOS = [
@@ -42,7 +42,7 @@ for nome, ent, esp in CASOS:
         print(f"  falhou {nome}: {type(e).__name__} {e}")
 for nome, ent in ERROS:
     try:
-        j(list(ent)); print(f"  falhou {nome}: não deu ValueError")
+        j(list(ent)); print(f"  falhou {nome}: nêo deu ValueError")
     except ValueError as e:
         if ent[0].strip() in str(e):
             ok += 1
@@ -52,7 +52,7 @@ for nome, ent in ERROS:
         print(f"  falhou {nome}: {type(e).__name__}")
 # misto: um texto ruim no meio de bons também é erro
 try:
-    j(["09:00-10:00", "xx"]); print("  falhou misto: não deu ValueError")
+    j(["09:00-10:00", "xx"]); print("  falhou misto: nêo deu ValueError")
 except ValueError:
     ok += 1
 except Exception:

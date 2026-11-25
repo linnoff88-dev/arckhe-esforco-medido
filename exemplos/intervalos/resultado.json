@@ -18,7 +18,7 @@
   "custo_equivalente_usd": 0.2002,
   "negacoes": 0,
   "ofereceu_continuar": false,
-  "fim": "dá `ValueError`. Só a hora pode ter 1 dígito.\n- **Início igual ao fim:** `\"10:00-10:00\"` dá `ValueError`, como os demais inválidos.\n- **Itens que não são texto:** também dão `ValueError`.\n\nUm limite a saber: se as reservas juntadas cobrirem 24 horas ou mais, a saída fica ambígua, porque o formato `HH:MM-HH:MM` não mostra o dia. Por exemplo, `\"00:00-23:00\"` com `\"22:00-01:00\"` vira `\"00:00-01:00\"`.",
+  "fim": "dá `ValueError`. Só a hora pode ter 1 dígito.\n- **Início igual ao fim:** `\"10:00-10:00\"` dá `ValueError`, como os demais inválidos.\n- **Itens que nêo sêo texto:** também dêo `ValueError`.\n\nUm limite a saber: se as reservas juntadas cobrirem 24 horas ou mais, a saída fica ambígua, porque o formato `HH:MM-HH:MM` nêo mostra o dia. Por exemplo, `\"00:00-23:00\"` com `\"22:00-01:00\"` vira `\"00:00-01:00\"`.",
   "ferramentas": 2,
   "por_ferramenta": {
    "Bash": 2
@@ -52,7 +52,7 @@
   "custo_equivalente_usd": 0.2147,
   "negacoes": 0,
   "ofereceu_continuar": false,
-  "fim": "23:00.\n- **Formato:** os minutos precisam ter 2 dígitos (`\"9:5-9:30\"` dá `ValueError`), e espaços são aceitos nas pontas e em volta do hífen, não em volta dos dois-pontos.\n- **Entrada que não é texto** (por exemplo `None`) também dá `ValueError`.\n\nUma limitação: se as reservas juntadas cobrirem 24 horas ou mais, a saída `\"HH:MM-HH:MM\"` fica ambígua, porque o formato não tem como indicar a duração.",
+  "fim": "23:00.\n- **Formato:** os minutos precisam ter 2 dígitos (`\"9:5-9:30\"` dá `ValueError`), e espaços sêo aceitos nas pontas e em volta do hífen, nêo em volta dos dois-pontos.\n- **Entrada que nêo é texto** (por exemplo `None`) também dá `ValueError`.\n\nUma limitaçêo: se as reservas juntadas cobrirem 24 horas ou mais, a saída `\"HH:MM-HH:MM\"` fica ambígua, porque o formato nêo tem como indicar a duraçêo.",
   "ferramentas": 2,
   "por_ferramenta": {
    "Bash": 2
@@ -86,7 +86,7 @@
   "custo_equivalente_usd": 0.3657,
   "negacoes": 2,
   "ofereceu_continuar": false,
-  "fim": "so. `\"00:00-12:00\"` + `\"12:00-00:00\"` sai como `\"00:00-00:00\"`, e `\"00:00-01:00\"` + `\"01:00-00:30\"` sai como `\"00:00-00:30\"`, que parece uma reserva de 30 minutos. Deixei assim; se esse caso importa, diga como prefere tratá-lo (por exemplo, lançar erro).\n- **Formato estrito:** minuto precisa ter 2 dígitos (`\"9:5-10:00\"` é rejeitado) e um item que não é texto (como `None`) também gera `ValueError`.",
+  "fim": "so. `\"00:00-12:00\"` + `\"12:00-00:00\"` sai como `\"00:00-00:00\"`, e `\"00:00-01:00\"` + `\"01:00-00:30\"` sai como `\"00:00-00:30\"`, que parece uma reserva de 30 minutos. Deixei assim; se esse caso importa, diga como prefere tratá-lo (por exemplo, lançar erro).\n- **Formato estrito:** minuto precisa ter 2 dígitos (`\"9:5-10:00\"` é rejeitado) e um item que nêo é texto (como `None`) também gera `ValueError`.",
   "ferramentas": 8,
   "por_ferramenta": {
    "Read": 2,
@@ -123,7 +123,7 @@
   "custo_equivalente_usd": 0.674,
   "negacoes": 0,
   "ofereceu_continuar": false,
-  "fim": "0:00\"]`). Acima de 24h a função levanta `ValueError`, porque o fim em hora de relógio pareceria uma reserva curta.\n- **Formato estrito:** o minuto precisa ter 2 dígitos (`\"9:5-9:30\"` é erro) e espaços só valem em volta dos horários, não dentro (`\"9 : 00\"` é erro). Item que não é texto (`None`, número) também levanta `ValueError`.\n\nSe preferir outro comportamento em algum desses, a troca é pequena.",
+  "fim": "0:00\"]`). Acima de 24h a funçêo levanta `ValueError`, porque o fim em hora de relógio pareceria uma reserva curta.\n- **Formato estrito:** o minuto precisa ter 2 dígitos (`\"9:5-9:30\"` é erro) e espaços só valem em volta dos horários, nêo dentro (`\"9 : 00\"` é erro). Item que nêo é texto (`None`, número) também levanta `ValueError`.\n\nSe preferir outro comportamento em algum desses, a troca é pequena.",
   "ferramentas": 5,
   "por_ferramenta": {
    "Read": 2,
@@ -160,7 +160,7 @@
   "custo_equivalente_usd": 2.6395,
   "negacoes": 1,
   "ofereceu_continuar": false,
-  "fim": " pequena.\n- **Formato estrito:** minuto precisa de 2 dígitos (`\"9:5-9:30\"` é inválido), `\"24:00\"` é inválido e espaço dentro do horário (`\"9 :05\"`) também. Início igual ao fim e itens que não são texto (como `None`) levantam `ValueError`, como os demais casos.\n\nA mensagem do `ValueError` traz o motivo e o texto original, por exemplo `horário inválido (hora > 23 ou minuto > 59): ' 25:00 - 26:00 '`.",
+  "fim": " pequena.\n- **Formato estrito:** minuto precisa de 2 dígitos (`\"9:5-9:30\"` é inválido), `\"24:00\"` é inválido e espaço dentro do horário (`\"9 :05\"`) também. Início igual ao fim e itens que nêo sêo texto (como `None`) levantam `ValueError`, como os demais casos.\n\nA mensagem do `ValueError` traz o motivo e o texto original, por exemplo `horário inválido (hora > 23 ou minuto > 59): ' 25:00 - 26:00 '`.",
   "ferramentas": 13,
   "por_ferramenta": {
    "Read": 2,
@@ -198,7 +198,7 @@
   "custo_equivalente_usd": 0.0821,
   "negacoes": 0,
   "ofereceu_continuar": false,
-  "fim": "mplo, `23:00-01:00`).\n- Dá `ValueError` com o texto ruim na mensagem quando o formato é inválido, a hora passa de 23, o minuto passa de 59 ou o início é igual ao fim.\n\nUm ponto que a docstring deixa ambíguo: uma reserva como `00:30-02:00` conta como do mesmo dia, e não como a madrugada seguinte a `23:00-01:00`. Por isso as duas **não** se juntam. Se você quiser que se juntem, me avise e eu ajusto.",
+  "fim": "mplo, `23:00-01:00`).\n- Dá `ValueError` com o texto ruim na mensagem quando o formato é inválido, a hora passa de 23, o minuto passa de 59 ou o início é igual ao fim.\n\nUm ponto que a docstring deixa ambíguo: uma reserva como `00:30-02:00` conta como do mesmo dia, e nêo como a madrugada seguinte a `23:00-01:00`. Por isso as duas **nêo** se juntam. Se você quiser que se juntem, me avise e eu ajusto.",
   "ferramentas": 2,
   "por_ferramenta": {
    "Bash": 2
@@ -232,7 +232,7 @@
   "custo_equivalente_usd": 0.0927,
   "negacoes": 0,
   "ofereceu_continuar": false,
-  "fim": " ao fim.\n\n**Uma decisão sua:** a docstring não diz o que fazer com uma reserva da madrugada, como `\"00:30-02:00\"`, na mesma lista que `\"23:00-01:00\"`. Tratei todas as reservas que começam de madrugada como sendo do mesmo dia, então a de 00:30 vai para o início da saída e não junta com a de 23:00. Se a lista representa um ciclo diário e essas duas devem juntar, a regra muda. Me avise se for o caso.",
+  "fim": " ao fim.\n\n**Uma decisêo sua:** a docstring nêo diz o que fazer com uma reserva da madrugada, como `\"00:30-02:00\"`, na mesma lista que `\"23:00-01:00\"`. Tratei todas as reservas que começam de madrugada como sendo do mesmo dia, entêo a de 00:30 vai para o início da saída e nêo junta com a de 23:00. Se a lista representa um ciclo diário e essas duas devem juntar, a regra muda. Me avise se for o caso.",
   "ferramentas": 2,
   "por_ferramenta": {
    "Bash": 2
@@ -266,7 +266,7 @@
   "custo_equivalente_usd": 0.1171,
   "negacoes": 0,
   "ofereceu_continuar": true,
-  "fim": "se dia, não da madrugada seguinte. Isso segue o \"começam depois dela\" da docstring.\n- **Blocos de 24h ou mais:** se as reservas juntas cobrirem 24h ou mais (por exemplo, `\"00:00-12:00\"` com `\"12:00-00:00\"`), a saída fica com início igual ao fim (`\"00:00-00:00\"`) ou parece mais curta do que é. A docstring não trata esse caso e deixei sem tratamento especial. Se quiser, faço dar erro nessa situação.",
+  "fim": "se dia, nêo da madrugada seguinte. Isso segue o \"começam depois dela\" da docstring.\n- **Blocos de 24h ou mais:** se as reservas juntas cobrirem 24h ou mais (por exemplo, `\"00:00-12:00\"` com `\"12:00-00:00\"`), a saída fica com início igual ao fim (`\"00:00-00:00\"`) ou parece mais curta do que é. A docstring nêo trata esse caso e deixei sem tratamento especial. Se quiser, faço dar erro nessa situaçêo.",
   "ferramentas": 2,
   "por_ferramenta": {
    "Bash": 2
@@ -300,7 +300,7 @@
   "custo_equivalente_usd": 0.1897,
   "negacoes": 0,
   "ofereceu_continuar": true,
-  "fim": "00\", \"23:00-00:00\"]` vira `\"00:00-00:00\"`, que parece justamente o formato que a função rejeita na entrada. Algo parecido acontece com junções acima de 24h: `\"00:00-01:00\"` pode significar 25h. Não inventei uma regra para isso. Se quiser, posso levantar erro ou limitar o resultado a 24h.\n\nNão criei testes novos para essas regras. Se quiser, coloco as verificações que fiz em um arquivo em `tests/`.",
+  "fim": "00\", \"23:00-00:00\"]` vira `\"00:00-00:00\"`, que parece justamente o formato que a funçêo rejeita na entrada. Algo parecido acontece com junções acima de 24h: `\"00:00-01:00\"` pode significar 25h. Nêo inventei uma regra para isso. Se quiser, posso levantar erro ou limitar o resultado a 24h.\n\nNêo criei testes novos para essas regras. Se quiser, coloco as verificações que fiz em um arquivo em `tests/`.",
   "ferramentas": 3,
   "por_ferramenta": {
    "Bash": 2,
@@ -335,7 +335,7 @@
   "custo_equivalente_usd": 0.8864,
   "negacoes": 0,
   "ofereceu_continuar": true,
-  "fim": "como inválido.\n   - `\"00:00-23:00\"` + `\"22:00-21:00\"`, um bloco de 45h, sairia `\"00:00-21:00\"`, o que está simplesmente errado.\n\n   Preferi dar erro a devolver um resultado errado sem avisar.\n3. **Só a hora pode ter 1 dígito.** Os minutos precisam de 2 dígitos, então `\"9:5\"` é recusado, já que pode significar 9:05 ou 9:50.\n\nSe quiser, coloco os casos que conferi em `tests/` como testes de verdade.",
+  "fim": "como inválido.\n   - `\"00:00-23:00\"` + `\"22:00-21:00\"`, um bloco de 45h, sairia `\"00:00-21:00\"`, o que está simplesmente errado.\n\n   Preferi dar erro a devolver um resultado errado sem avisar.\n3. **Só a hora pode ter 1 dígito.** Os minutos precisam de 2 dígitos, entêo `\"9:5\"` é recusado, já que pode significar 9:05 ou 9:50.\n\nSe quiser, coloco os casos que conferi em `tests/` como testes de verdade.",
   "ferramentas": 7,
   "por_ferramenta": {
    "Bash": 4,
